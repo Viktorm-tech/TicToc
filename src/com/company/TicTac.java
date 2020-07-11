@@ -93,6 +93,7 @@ public class TicTac {
         } while(!isCellValid(x, y));
 
         map[y][x] = DOT_X;
+        rate[y][x] = 0;
     }
 
     // computer turn
@@ -127,6 +128,7 @@ public class TicTac {
         }
 
         if (maxRate != 0) {
+
             for (int i = 0; i < SIZE; i++) {
                 for (int j = 0; j < SIZE; j++) {
                     if (rate[i][j] == maxRate) {
